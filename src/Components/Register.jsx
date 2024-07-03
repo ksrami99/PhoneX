@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 function Register() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   return (
     <div className="bg-[url('/assets/newsletter-bg.jpeg')]">
       <div className="h-screen flex justify-center items-center">
@@ -65,19 +65,19 @@ function Register() {
                 placeholder="Enter your password"
               />
               <div className="flex justify-between">
-              <a className="text-gray-600 hover:text-gray-800" href="#">
-                Forgot your password?
-              </a>
-              <a
-                className="text-gray-600 hover:text-gray-800"
-                href="#"
-                onClick={() => {
-                  navigate("/login");
-                }}
-              >
-                Already have an Account? Login
-              </a>
-            </div>
+                <a className="text-gray-600 hover:text-gray-800" href="#">
+                  Forgot your password?
+                </a>
+                <a
+                  className="text-gray-600 hover:text-gray-800"
+                  href="#"
+                  onClick={() => {
+                    navigate("/login");
+                  }}
+                >
+                  Already have an Account? Login
+                </a>
+              </div>
             </div>
             <div className="mb-6">
               <button

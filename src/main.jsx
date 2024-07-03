@@ -17,6 +17,7 @@ import {
 import Search from "./Components/Search.jsx";
 import Register from "./Components/Register.jsx";
 import Login from "./Components/Login.jsx";
+import Admin from "./Components/Admin.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -29,6 +30,8 @@ const router = createBrowserRouter(
       <Route path="/search" element={<Search />} />
       <Route path="/login" element={<Login   />} />
       <Route path="/register" element={<Register />} />
+      <Route path="/admin" element={<Admin />} />
+      {/* <Route path="/admin" element={<Admin />} /> */}
     </Route>
   )
 );
