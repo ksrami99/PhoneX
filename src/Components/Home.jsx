@@ -25,7 +25,7 @@ function Home() {
             </button>
             <button
               type="read-more"
-              class="text-black bg-white border-2 m-5 font-medium rounded-lg text-sm px-4 py-2 "
+              className="text-black bg-white border-2 m-5 font-medium rounded-lg text-sm px-4 py-2 "
             >
               READ MORE
             </button>
@@ -50,6 +50,11 @@ function Home() {
       </div>
 
       <div className="flex flex-wrap justify-center my-10">
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
         <ProductCard />
         <ProductCard />
         <ProductCard />

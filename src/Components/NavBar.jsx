@@ -50,7 +50,7 @@ function NavBar() {
             <span
               className="material-symbols-outlined p-5 cursor-pointer"
               onClick={() => {
-                navigate("/profile");
+                navigate("/login");
               }}
             >
               person

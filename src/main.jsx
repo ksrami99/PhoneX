@@ -16,6 +16,7 @@ import {
 } from "react-router-dom";
 import Search from "./Components/Search.jsx";
 import Register from "./Components/Register.jsx";
+import Login from "./Components/Login.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -26,6 +27,7 @@ const router = createBrowserRouter(
       <Route path="/profile" element={<Profile />} />
       <Route path="/cart" element={<Cart />} />
       <Route path="/search" element={<Search />} />
+      <Route path="/login" element={<Login   />} />
       <Route path="/register" element={<Register />} />
     </Route>
   )
