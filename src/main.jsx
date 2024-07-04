@@ -5,7 +5,6 @@ import "./index.css";
 
 import About from "./Components/About.jsx";
 import Home from "./Components/Home.jsx";
-import Cart from "./Components/Cart.jsx";
 import Profile from "./Components/Profile.jsx";
 
 import {
@@ -26,18 +25,16 @@ const router = createBrowserRouter(
       <Route path="/home" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/profile" element={<Profile />} />
-      <Route path="/cart" element={<Cart />} />
       <Route path="/search" element={<Search />} />
-      <Route path="/login" element={<Login   />} />
+      <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route path="/admin" element={<Admin />} />
-      {/* <Route path="/admin" element={<Admin />} /> */}
     </Route>
   )
 );
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router}/>
+    <RouterProvider router={router} />
   </React.StrictMode>
 );

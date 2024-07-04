@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import SidebarCart from "./Cart/SideBarCart";
 
 function NavBar() {
-  const navigate = useNavigate('');
+  const navigate = useNavigate();
+  const [isCartOpen, setIsCartOpen] = useState(false);
+
+  const toggleCart = () => {
+    setIsCartOpen(!isCartOpen);
+  };
+
   return (
     <div>
       <nav className="flex place-content-between bg-black">
@@ -41,9 +48,7 @@ function NavBar() {
             </span>
             <span
               className="material-symbols-outlined p-5 cursor-pointer"
-              onClick={() => {
-                navigate("/cart");
-              }}
+              onClick={toggleCart}
             >
               shopping_cart
             </span>
@@ -58,6 +63,8 @@ function NavBar() {
           </ul>
         </div>
       </nav>
+
+      <SidebarCart isOpen={isCartOpen} toggleCart={toggleCart} />
     </div>
   );
 }
