@@ -1,5 +1,3 @@
-// src/index.js
-
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
@@ -13,8 +11,8 @@ import Register from "./Components/Register.jsx";
 import Login from "./Components/Login.jsx";
 import Admin from "./Components/Admin.jsx";
 import UserList from "./Components/Admin/UserList.jsx";
-import AdminDashboard from "./Components/Admin/AdminDashboard.jsx";
 import ManageOrders from "./Components/Admin/ManageOrders.jsx";
+import CategoryPage from "./Components/Product/CategoryPage.jsx";
 import ProductDetails from "./Components/Product/ProductDetails.jsx";
 
 import {
@@ -40,6 +38,7 @@ const router = createBrowserRouter(
         <Route path="postcategory" element={<div>Post Category Page</div>} />
         <Route path="manageorders" element={<ManageOrders />} />
       </Route>
+      <Route path="/category/:category" element={<CategoryPage />} />
       <Route path="/product/:id" element={<ProductDetails />} />
     </Route>
   )

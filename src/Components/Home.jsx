@@ -1,21 +1,29 @@
-// src/Components/Home.jsx
-
 import React from "react";
 import ProductCategory from "./Product/ProductCategory";
 import NewsLetter from "./NewsLetter";
-import Footer from "./Footer";
 import ProductCard from "./Product/ProductCard";
+
+const categories = [
+  { name: "earbuds", image: "../../assets/category/cat-1.jpg" },
+  { name: "headphones", image: "../../assets/category/cat-2.jpg" },
+  { name: "earbuds", image: "../../assets/category/cat-3.jpg" },
+  { name: "earbuds", image: "../../assets/category/cat-4.jpg" },
+  // Add more categories here
+];
 
 const products = [
   {
     id: 1,
-    title: "boAt Rockerz 450 DC edition | Wireless Headphone with 40mm Dynamic Driver",
-    price: "₹1999",
-    details: "There is no better justice to your playlist & binging than Rockerz 450 boAt | DC edition. If low battery is your enemy, the 15HRS non-stop playback is here to rightfully combat that...",
-    category: "HEADPHONES",
-    image: "../../assets/products/earbuds-prod-1.webp",
+    title: "boAt Rockerz 450 DC edition",
+    price: 1999,
+    image: "../../assets/products/headphones-prod-1.webp",
+    category: "headphones",
+    details: "Product details here...",
+    relatedProducts: [
+      { id: 2, title: "Related Product 1", image: "../../assets/products/related-prod-1.webp" },
+      { id: 3, title: "Related Product 2", image: "../../assets/products/related-prod-2.webp" },
+    ],
   },
-  // Add more products as needed
 ];
 
 function Home() {
@@ -51,10 +59,9 @@ function Home() {
       </div>
 
       <div className="flex">
-        <ProductCategory imagSrc="../../assets/category/cat-1.jpg" />
-        <ProductCategory imagSrc="../../assets/category/cat-2.jpg" />
-        <ProductCategory imagSrc="../../assets/category/cat-3.jpg" />
-        <ProductCategory imagSrc="../../assets/category/cat-4.jpg" />
+        {categories.map((category) => (
+          <ProductCategory key={category.name} imagSrc={category.image} category={category.name} />
+        ))}
       </div>
 
       <div>
@@ -70,7 +77,6 @@ function Home() {
       </div>
 
       <NewsLetter />
-      <Footer />
     </div>
   );
 }
