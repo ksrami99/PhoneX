@@ -15,6 +15,7 @@ import Admin from "./Components/Admin.jsx";
 import UserList from "./Components/Admin/UserList.jsx";
 import AdminDashboard from "./Components/Admin/AdminDashboard.jsx";
 import ManageOrders from "./Components/Admin/ManageOrders.jsx";
+import ProductDetails from "./Components/Product/ProductDetails.jsx";
 
 import {
   Route,
@@ -39,6 +40,7 @@ const router = createBrowserRouter(
         <Route path="postcategory" element={<div>Post Category Page</div>} />
         <Route path="manageorders" element={<ManageOrders />} />
       </Route>
+      <Route path="/product/:id" element={<ProductDetails />} />
     </Route>
   )
 );

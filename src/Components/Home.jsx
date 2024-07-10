@@ -1,8 +1,22 @@
+// src/Components/Home.jsx
+
 import React from "react";
 import ProductCategory from "./Product/ProductCategory";
 import NewsLetter from "./NewsLetter";
 import Footer from "./Footer";
 import ProductCard from "./Product/ProductCard";
+
+const products = [
+  {
+    id: 1,
+    title: "boAt Rockerz 450 DC edition | Wireless Headphone with 40mm Dynamic Driver",
+    price: "₹1999",
+    details: "There is no better justice to your playlist & binging than Rockerz 450 boAt | DC edition. If low battery is your enemy, the 15HRS non-stop playback is here to rightfully combat that...",
+    category: "HEADPHONES",
+    image: "../../assets/products/earbuds-prod-1.webp",
+  },
+  // Add more products as needed
+];
 
 function Home() {
   return (
@@ -50,17 +64,9 @@ function Home() {
       </div>
 
       <div className="flex flex-wrap justify-center my-10">
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
+        {products.map((product) => (
+          <ProductCard key={product.id} product={product} />
+        ))}
       </div>
 
       <NewsLetter />
