@@ -10,7 +10,6 @@ function Sidebar() {
       <SidebarItem title="User List" icon="👥" onClick={() => navigate('/admin/userlist')} />
       <SidebarItem title="Post Product" icon="🛍️" onClick={() => navigate('/admin/postproduct')} />
       <SidebarItem title="Post Category" icon="📂" onClick={() => navigate('/admin/postcategory')} />
-      <SidebarItem title="Manage Orders" icon="📦" onClick={() => navigate('/admin/manageorders')} />
     </div>
   );
 }

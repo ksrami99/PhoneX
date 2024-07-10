@@ -11,9 +11,10 @@ import Register from "./Components/Register.jsx";
 import Login from "./Components/Login.jsx";
 import Admin from "./Components/Admin.jsx";
 import UserList from "./Components/Admin/UserList.jsx";
-import ManageOrders from "./Components/Admin/ManageOrders.jsx";
 import CategoryPage from "./Components/Product/CategoryPage.jsx";
 import ProductDetails from "./Components/Product/ProductDetails.jsx";
+import PostProduct from "./Components/Admin/PostProduct.jsx";
+import PostCategory from "./Components/Admin/PostCategory.jsx";
 
 import {
   Route,
@@ -34,9 +35,8 @@ const router = createBrowserRouter(
       <Route path="/register" element={<Register />} />
       <Route path="/admin" element={<Admin />}>
         <Route path="userlist" element={<UserList />} />
-        <Route path="postproduct" element={<div>Post Product Page</div>} />
-        <Route path="postcategory" element={<div>Post Category Page</div>} />
-        <Route path="manageorders" element={<ManageOrders />} />
+        <Route path="postproduct" element={<PostProduct />} />
+        <Route path="postcategory" element={<PostCategory />} />
       </Route>
       <Route path="/category/:category" element={<CategoryPage />} />
       <Route path="/product/:id" element={<ProductDetails />} />
