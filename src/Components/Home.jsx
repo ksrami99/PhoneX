@@ -8,7 +8,6 @@ const categories = [
   { name: "headphones", image: "../../assets/category/cat-2.jpg" },
   { name: "earbuds", image: "../../assets/category/cat-3.jpg" },
   { name: "earbuds", image: "../../assets/category/cat-4.jpg" },
-  // Add more categories here
 ];
 
 const products = [
