@@ -6,7 +6,6 @@ function Admin() {
   return (
     <div>
       <AdminDashboard />
-      <Outlet />
     </div>
   );
 }

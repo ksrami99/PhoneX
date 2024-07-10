@@ -15,12 +15,12 @@ const products = [
     id: 1,
     title: "boAt Rockerz 450 DC edition",
     price: 1999,
-    image: "../../assets/products/headphones-prod-1.webp",
+    image: "../../assets/products/earbuds-prod-1.webp",
     category: "headphones",
     details: "Product details here...",
     relatedProducts: [
-      { id: 2, title: "Related Product 1", image: "../../assets/products/related-prod-1.webp" },
-      { id: 3, title: "Related Product 2", image: "../../assets/products/related-prod-2.webp" },
+      { id: 2, title: "Related Product 1", image: "../../assets/products/earbuds-prod-2.webp" },
+      { id: 3, title: "Related Product 2", image: "../../assets/products/earbuds-prod-3.webp" },
     ],
   },
 ];
